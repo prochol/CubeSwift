@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		705D33C919613E9100D24797 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D33C819613E9100D24797 /* main.swift */; };
 		705D33CB19613E9100D24797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D33CA19613E9100D24797 /* AppDelegate.swift */; };
 		705D33CD19613E9100D24797 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D33CC19613E9100D24797 /* GameView.swift */; };
 		705D33CF19613E9100D24797 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D33CE19613E9100D24797 /* GameViewController.swift */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		705D33C319613E9100D24797 /* Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705D33C719613E9100D24797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		705D33C819613E9100D24797 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		705D33CA19613E9100D24797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705D33CC19613E9100D24797 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		705D33CE19613E9100D24797 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				705D33C719613E9100D24797 /* Info.plist */,
-				705D33C819613E9100D24797 /* main.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,14 +165,17 @@
 		705D33BB19613E9100D24797 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "enterra-inc";
 				TargetAttributes = {
 					705D33C219613E9100D24797 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0830;
 					};
 					705D33D819613E9100D24797 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 705D33C219613E9100D24797;
 					};
 				};
@@ -229,7 +229,6 @@
 				705D33CB19613E9100D24797 /* AppDelegate.swift in Sources */,
 				705D33ED19613EE000D24797 /* Layer.swift in Sources */,
 				705D33CD19613E9100D24797 /* GameView.swift in Sources */,
-				705D33C919613E9100D24797 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +347,7 @@
 				INFOPLIST_FILE = Cube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -359,6 +359,7 @@
 				INFOPLIST_FILE = Cube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -379,6 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -396,6 +398,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -419,6 +422,7 @@
 				705D33E519613E9100D24797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		705D33E619613E9100D24797 /* Build configuration list for PBXNativeTarget "CubeTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +431,7 @@
 				705D33E819613E9100D24797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

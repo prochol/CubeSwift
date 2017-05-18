@@ -8,11 +8,12 @@
 
 import Cocoa
 
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    @IBOutlet var window: NSWindow
+    @IBOutlet var window: NSWindow!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
     

@@ -10,42 +10,32 @@ import SceneKit
 
 class GameView: SCNView {
     
-    override func mouseDown(theEvent: NSEvent) {
+    override func mouseDown(with theEvent: NSEvent) {
         /* Called when a mouse click occurs */
         
         // check what nodes are clicked
-        let p = self.convertPoint(theEvent.locationInWindow, fromView: nil)
+        let p = self.convert(theEvent.locationInWindow, from: nil)
         let hitResults = self.hitTest(p, options: nil)
         
         // check that we clicked on at least one object
-        if (hitResults.count > 0){
+        if (hitResults.count > 0) {
             // retrieved the first clicked object
             let result: AnyObject = hitResults[0]
             
-            var node = result.node!
+            let node = result.node!
             
-            if (node.parentNode.isKindOfClass(PrimitiveCube))
-            {
-                let nodePrimitive = result.node!.parentNode as PrimitiveCube
+            if (node.parent!.isKind(of: PrimitiveCube.self)) {
+                let nodePrimitive = result.node!.parent as! PrimitiveCube
                 
-                if (!nodePrimitive.parentNode.isKindOfClass(Layer))
-                {
-                    var cube = nodePrimitive.parentNode as Cube
+                if (!nodePrimitive.parent!.isKind(of: Layer.self)) {
+                    let cube = nodePrimitive.parent as! Cube
                     
-                    if (!cube.selectSide2)
-                    {
-                        cube.selectSide(node)
-                    }
-                    
-                    /*if (!cube.selectComponent3)
-                    {
-                    cube.selectComponent(nodePrimitive)
-                    }*/
+                    cube.selectSide(node)
                 }
             }
         }
         
-        super.mouseDown(theEvent)
+        super.mouseDown(with: theEvent)
     }
 
 }
